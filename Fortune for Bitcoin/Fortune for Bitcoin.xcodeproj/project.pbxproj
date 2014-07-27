@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A980FE0198565D000464869 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FDF198565D000464869 /* Foundation.framework */; };
+		5A980FE2198565D000464869 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FE1198565D000464869 /* CoreGraphics.framework */; };
+		5A980FE4198565D000464869 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FE3198565D000464869 /* UIKit.framework */; };
+		5A980FEA198565D000464869 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A980FE8198565D000464869 /* InfoPlist.strings */; };
+		5A980FEC198565D000464869 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A980FEB198565D000464869 /* main.m */; };
+		5A980FF0198565D100464869 /* FOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A980FEF198565D100464869 /* FOAppDelegate.m */; };
+		5A980FF2198565D100464869 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A980FF1198565D100464869 /* Images.xcassets */; };
+		5A980FF9198565D100464869 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FF8198565D100464869 /* XCTest.framework */; };
+		5A980FFA198565D100464869 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FDF198565D000464869 /* Foundation.framework */; };
+		5A980FFB198565D100464869 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FE3198565D000464869 /* UIKit.framework */; };
+		5A981003198565D100464869 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A981001198565D100464869 /* InfoPlist.strings */; };
+		5A981005198565D100464869 /* Fortune_for_BitcoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A981004198565D100464869 /* Fortune_for_BitcoinTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A980FFC198565D100464869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A980FD4198565D000464869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A980FDB198565D000464869;
+			remoteInfo = "Fortune for Bitcoin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A980FDC198565D000464869 /* Fortune for Bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fortune for Bitcoin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A980FDF198565D000464869 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5A980FE1198565D000464869 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5A980FE3198565D000464869 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5A980FE7198565D000464869 /* Fortune for Bitcoin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fortune for Bitcoin-Info.plist"; sourceTree = "<group>"; };
+		5A980FE9198565D000464869 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A980FEB198565D000464869 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A980FED198565D000464869 /* Fortune for Bitcoin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fortune for Bitcoin-Prefix.pch"; sourceTree = "<group>"; };
+		5A980FEE198565D000464869 /* FOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FOAppDelegate.h; sourceTree = "<group>"; };
+		5A980FEF198565D100464869 /* FOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FOAppDelegate.m; sourceTree = "<group>"; };
+		5A980FF1198565D100464869 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A980FF7198565D100464869 /* Fortune for BitcoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fortune for BitcoinTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A980FF8198565D100464869 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5A981000198565D100464869 /* Fortune for BitcoinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fortune for BitcoinTests-Info.plist"; sourceTree = "<group>"; };
+		5A981002198565D100464869 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A981004198565D100464869 /* Fortune_for_BitcoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fortune_for_BitcoinTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A980FD9198565D000464869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A980FE2198565D000464869 /* CoreGraphics.framework in Frameworks */,
+				5A980FE4198565D000464869 /* UIKit.framework in Frameworks */,
+				5A980FE0198565D000464869 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A980FF4198565D100464869 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A980FF9198565D100464869 /* XCTest.framework in Frameworks */,
+				5A980FFB198565D100464869 /* UIKit.framework in Frameworks */,
+				5A980FFA198565D100464869 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A980FD3198565D000464869 = {
+			isa = PBXGroup;
+			children = (
+				5A980FE5198565D000464869 /* Fortune for Bitcoin */,
+				5A980FFE198565D100464869 /* Fortune for BitcoinTests */,
+				5A980FDE198565D000464869 /* Frameworks */,
+				5A980FDD198565D000464869 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A980FDD198565D000464869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A980FDC198565D000464869 /* Fortune for Bitcoin.app */,
+				5A980FF7198565D100464869 /* Fortune for BitcoinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A980FDE198565D000464869 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A980FDF198565D000464869 /* Foundation.framework */,
+				5A980FE1198565D000464869 /* CoreGraphics.framework */,
+				5A980FE3198565D000464869 /* UIKit.framework */,
+				5A980FF8198565D100464869 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A980FE5198565D000464869 /* Fortune for Bitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				5A980FEE198565D000464869 /* FOAppDelegate.h */,
+				5A980FEF198565D100464869 /* FOAppDelegate.m */,
+				5A980FF1198565D100464869 /* Images.xcassets */,
+				5A980FE6198565D000464869 /* Supporting Files */,
+			);
+			path = "Fortune for Bitcoin";
+			sourceTree = "<group>";
+		};
+		5A980FE6198565D000464869 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A980FE7198565D000464869 /* Fortune for Bitcoin-Info.plist */,
+				5A980FE8198565D000464869 /* InfoPlist.strings */,
+				5A980FEB198565D000464869 /* main.m */,
+				5A980FED198565D000464869 /* Fortune for Bitcoin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A980FFE198565D100464869 /* Fortune for BitcoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A981004198565D100464869 /* Fortune_for_BitcoinTests.m */,
+				5A980FFF198565D100464869 /* Supporting Files */,
+			);
+			path = "Fortune for BitcoinTests";
+			sourceTree = "<group>";
+		};
+		5A980FFF198565D100464869 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A981000198565D100464869 /* Fortune for BitcoinTests-Info.plist */,
+				5A981001198565D100464869 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A980FDB198565D000464869 /* Fortune for Bitcoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A981008198565D100464869 /* Build configuration list for PBXNativeTarget "Fortune for Bitcoin" */;
+			buildPhases = (
+				5A980FD8198565D000464869 /* Sources */,
+				5A980FD9198565D000464869 /* Frameworks */,
+				5A980FDA198565D000464869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fortune for Bitcoin";
+			productName = "Fortune for Bitcoin";
+			productReference = 5A980FDC198565D000464869 /* Fortune for Bitcoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A980FF6198565D100464869 /* Fortune for BitcoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A98100B198565D100464869 /* Build configuration list for PBXNativeTarget "Fortune for BitcoinTests" */;
+			buildPhases = (
+				5A980FF3198565D100464869 /* Sources */,
+				5A980FF4198565D100464869 /* Frameworks */,
+				5A980FF5198565D100464869 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A980FFD198565D100464869 /* PBXTargetDependency */,
+			);
+			name = "Fortune for BitcoinTests";
+			productName = "Fortune for BitcoinTests";
+			productReference = 5A980FF7198565D100464869 /* Fortune for BitcoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A980FD4198565D000464869 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FO;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Fortune Inc.";
+				TargetAttributes = {
+					5A980FF6198565D100464869 = {
+						TestTargetID = 5A980FDB198565D000464869;
+					};
+				};
+			};
+			buildConfigurationList = 5A980FD7198565D000464869 /* Build configuration list for PBXProject "Fortune for Bitcoin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5A980FD3198565D000464869;
+			productRefGroup = 5A980FDD198565D000464869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A980FDB198565D000464869 /* Fortune for Bitcoin */,
+				5A980FF6198565D100464869 /* Fortune for BitcoinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A980FDA198565D000464869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A980FEA198565D000464869 /* InfoPlist.strings in Resources */,
+				5A980FF2198565D100464869 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A980FF5198565D100464869 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A981003198565D100464869 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A980FD8198565D000464869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A980FEC198565D000464869 /* main.m in Sources */,
+				5A980FF0198565D100464869 /* FOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A980FF3198565D100464869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A981005198565D100464869 /* Fortune_for_BitcoinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A980FFD198565D100464869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A980FDB198565D000464869 /* Fortune for Bitcoin */;
+			targetProxy = 5A980FFC198565D100464869 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A980FE8198565D000464869 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A980FE9198565D000464869 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5A981001198565D100464869 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A981002198565D100464869 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A981006198565D100464869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5A981007198565D100464869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A981009198565D100464869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fortune for Bitcoin/Fortune for Bitcoin-Prefix.pch";
+				INFOPLIST_FILE = "Fortune for Bitcoin/Fortune for Bitcoin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5A98100A198565D100464869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fortune for Bitcoin/Fortune for Bitcoin-Prefix.pch";
+				INFOPLIST_FILE = "Fortune for Bitcoin/Fortune for Bitcoin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5A98100C198565D100464869 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fortune for Bitcoin.app/Fortune for Bitcoin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fortune for Bitcoin/Fortune for Bitcoin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Fortune for BitcoinTests/Fortune for BitcoinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5A98100D198565D100464869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fortune for Bitcoin.app/Fortune for Bitcoin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fortune for Bitcoin/Fortune for Bitcoin-Prefix.pch";
+				INFOPLIST_FILE = "Fortune for BitcoinTests/Fortune for BitcoinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A980FD7198565D000464869 /* Build configuration list for PBXProject "Fortune for Bitcoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A981006198565D100464869 /* Debug */,
+				5A981007198565D100464869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A981008198565D100464869 /* Build configuration list for PBXNativeTarget "Fortune for Bitcoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A981009198565D100464869 /* Debug */,
+				5A98100A198565D100464869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A98100B198565D100464869 /* Build configuration list for PBXNativeTarget "Fortune for BitcoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A98100C198565D100464869 /* Debug */,
+				5A98100D198565D100464869 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A980FD4198565D000464869 /* Project object */;
+}
