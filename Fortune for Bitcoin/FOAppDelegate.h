@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FOAppDelegate : UIResponder <UIApplicationDelegate>
+#import "FOTransactionTableViewController.h"
+#import "JSSlidingViewController.h"
+#import "FOSettingsViewController.h"
+
+@interface FOAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) JSSlidingViewController *viewController;
+@property (strong, nonatomic) UIViewController *backVC;
+@property (strong, nonatomic) UIViewController *frontVC;
 
 @end
