@@ -1,3 +1,5 @@
 pod 'Chain', '0.1.15'
-pod 'QR-Code-Encoder-for-Objective-C'
 pod 'CDZQRScanningViewController'
+pod 'CoreBitcoin', :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
+pod 'CRGradientNavigationBar'
+
