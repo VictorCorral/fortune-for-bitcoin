@@ -6,13 +6,16 @@
 //  Copyright (c) 2014 Fortune Inc. All rights reserved.
 //
 
-#import "NSString+Additions.h"
+
 #import "Chain.h"
+#import "NSString+Additions.h"
+#import "CDZQRScanningViewController.h"
+
 #import "FOTransactionTableViewController.h"
 #import "FOTransactionTableViewCell.h"
 
 
-@interface FOTransactionTableViewController ()
+@interface FOTransactionTableViewController () <UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *noTransactionsFooterView;
 @property NSTimer *refreshTimer;
@@ -89,7 +92,9 @@
 
 - (void) addAddress{
     
-    NSLog(@"Vegas");
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Add Address To Track" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Scan QR Code", @"Paste from Clipboard", nil];
+    [actionSheet showInView:self.view];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -315,7 +320,90 @@
     return amount;
 }
 
+# pragma mark - Action Sheet
 
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+        if (buttonIndex == 0) {
+            [self presentQRScanner];
+        }
+        if (buttonIndex == 1) {
+            // Get the contents of the device clipboard.
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            NSString * possibleAddress;
+            possibleAddress = pasteboard.string;
+            
+            // Check Pasteboard content against a regular expression to see if it is a valid Bitcoin addres format. If it matches, load sendViewController and pass the string to it. If it does not match or clipboard is empty, show a UIAlertView notifying the user.
+            if (([possibleAddress rangeOfString:@"^[13][a-km-zA-HJ-NP-Z0-9]{26,33}$" options:NSRegularExpressionSearch].location != NSNotFound) && possibleAddress.length !=0) {
+                self.address = possibleAddress;
+                [self updateBalanceAndTransactions];
+                
+            }
+            else {
+                NSLog(@"Not a valid Bitcoin address");
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                    message:@"Clipboard does not contain a valid Bitcoin address"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                
+                [alertView show];
+            }
+        }
+}
+
+
+# pragma mark - QR Code Scanner
+
+
+- (void)presentQRScanner {
+    // TODO - Validate scan as valid address with regex
+    
+    // create the scanning view controller and a navigation controller in which to present it:
+    CDZQRScanningViewController *scanningVC = [CDZQRScanningViewController new];
+    UINavigationController *scanningNavVC = [[UINavigationController alloc] initWithRootViewController:scanningVC];
+    
+    // making nav transparent
+    scanningNavVC.title = @"";
+    
+    [scanningNavVC.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    scanningNavVC.navigationBar.shadowImage = [UIImage new];
+    scanningNavVC.navigationBar.translucent = YES;
+    scanningNavVC.view.backgroundColor = [UIColor clearColor];
+    
+    // configure the scanning view controller:
+    scanningVC.resultBlock = ^(NSString *result) {
+        
+        // On Sucessful QR scan, present the SendViewController.
+        [scanningNavVC.presentingViewController dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"raw scan: %@", result);
+            
+            // We need to remove bitcoin:// or bitcoin: if present at beginning of scanned address.
+            NSString* parsedAddress;
+            parsedAddress = [result stringByReplacingOccurrencesOfString:@"bitcoin://" withString:@""];
+            parsedAddress = [parsedAddress stringByReplacingOccurrencesOfString:@"bitcoin:" withString:@""];
+            NSLog(@"parsed scan: %@", parsedAddress);
+            
+            //Pass the parsed address to the view.
+            self.address = parsedAddress;
+            [self updateBalanceAndTransactions];
+            
+            NSLog(@"%@", self.address);
+            
+//            [self presentSendView];
+        }];
+    };
+    scanningVC.cancelBlock = ^() {
+        [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
+    };
+    scanningVC.errorBlock = ^(NSError *error) {
+        // todo: show a UIAlertView orNSLog the error
+        [scanningNavVC dismissViewControllerAnimated:YES completion:nil];
+    };
+    
+    // present the view controller modally
+    [self presentViewController:scanningNavVC animated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.
