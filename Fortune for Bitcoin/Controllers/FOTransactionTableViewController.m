@@ -32,7 +32,7 @@
         // Custom initialization
         //1FHHpCvhgvh9BwFDMUhPCVXQZWM1fXPm6R
         //1219jNaVgZSyRCCmAkcez7nX3bZhUMgpff
-            self.address = @"1FHHpCvhgvh9BwFDMUhPCVXQZWM1fXPm6R";
+//            self.address = @"1FHHpCvhgvh9BwFDMUhPCVXQZWM1fXPm6R";
         
         UINib *nib = [UINib nibWithNibName:@"FOTransactionTableViewCell" bundle:nil];
         [self.tableView registerNib:nib forCellReuseIdentifier:@"FOTransactionTableViewCell"];
@@ -73,21 +73,26 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     
-    UIImage *image = [UIImage imageNamed:@"add"];
-    CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
-    
-    //init a normal UIButton using that image
-    UIButton* button = [[UIButton alloc] initWithFrame:frame];
-    [button setBackgroundImage:image forState:UIControlStateNormal];
-    
-    [button addTarget:self action:@selector(addAddress) forControlEvents:UIControlEventTouchDown];
-    
-    id addButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    //    id editButton = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editCoin)];
-    
-    self.title = @"Fortune";
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIImage *image = [UIImage imageNamed:@"add"];
+//    CGRect frame = CGRectMake(0, 0, image.size.width, image.size.height);
+//    
+//    //init a normal UIButton using that image
+//    UIButton* button = [[UIButton alloc] initWithFrame:frame];
+//    [button setBackgroundImage:image forState:UIControlStateNormal];
+//    
+//    [button addTarget:self action:@selector(addAddress) forControlEvents:UIControlEventTouchDown];
+//    
+//    id addButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+//    //    id editButton = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editCoin)];
+//    
+//    self.title = @"Fortune";
+//    self.navigationItem.rightBarButtonItem = addButton;
 //     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    [self.navigationItem setHidesBackButton:YES animated:YES];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+
+
 }
 
 - (void) addAddress{
