@@ -7,7 +7,6 @@
 //
 
 #import "FOAddressManager.h"
-#import "FOAddressTableViewCell.h"
 #import "FOAddressTableViewController.h"
 #import "CDZQRScanningViewController.h"
 
@@ -57,7 +56,7 @@
     id addButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     //    id editButton = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editCoin)];
     
-    self.title = @"Fortune";
+    self.title = @"Accounts";
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
@@ -93,6 +92,8 @@
             newAddress.addressName = @"Laundry Account";
             FOAddressManager *manager = [FOAddressManager sharedManager];
             [manager addAddress:newAddress];
+            [manager loadAddresses];
+            [self.tableView reloadData];
             
             
         }
@@ -148,6 +149,8 @@
                 newAddress.addressName = @"Laundry Account";
                 FOAddressManager *manager = [FOAddressManager sharedManager];
                 [manager addAddress:newAddress];
+                [manager loadAddresses];
+                [self.tableView reloadData];
                 
             }
             else {
@@ -203,6 +206,7 @@
     }
     
     FOAddress *address = [[[FOAddressManager sharedManager] getAddresses]objectAtIndex:indexPath.row];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
     cell.textLabel.text = address.address;
     
     return cell;
@@ -217,6 +221,15 @@
     return YES;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FOAddress *address = [[[FOAddressManager sharedManager] getAddresses] objectAtIndex:indexPath.row];
+    FOTransactionTableViewController *detail = [[FOTransactionTableViewController alloc]init];
+    detail.address = address.address;
+    [self.navigationController pushViewController:detail animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 /*
 // Override to support editing the table view.

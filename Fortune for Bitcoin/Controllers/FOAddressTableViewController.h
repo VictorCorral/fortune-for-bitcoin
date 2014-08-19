@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FOTransactionTableViewController.h"
+
 @interface FOAddressTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *addresses;
