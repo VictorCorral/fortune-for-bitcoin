@@ -55,6 +55,8 @@
 //    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:navigationController backViewController:backVC];
 //    self.viewController.delegate = self;
 //    self.viewController.useParallaxMotionEffect = YES;
+    navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     
     [self.window setRootViewController:navigationController];
     
