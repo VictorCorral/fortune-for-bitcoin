@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "FOTransactionTableViewController.h"
 #import "JSSlidingViewController.h"
+
+
+
 #import "FOSettingsViewController.h"
+#import "FOTransactionTableViewController.h"
+#import "FOAddressTableViewController.h"
 
 @interface FOAppDelegate : UIResponder <UIApplicationDelegate, JSSlidingViewControllerDelegate>
 

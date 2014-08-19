@@ -7,8 +7,11 @@
 //
 
 #import "Chain.h"
-#import "FOAppDelegate.h"
 #import "CRGradientNavigationBar.h"
+
+#import "FOAppDelegate.h"
+
+
 
 
 @implementation FOAppDelegate
@@ -35,10 +38,10 @@
     [[CRGradientNavigationBar appearance] setBarTintGradientColors:colors];
     [[navigationController navigationBar] setTranslucent:NO];
     
-    FOTransactionTableViewController *transactions = [[FOTransactionTableViewController alloc] init];
-    [navigationController setViewControllers:@[transactions]];
+    FOAddressTableViewController *addresses = [[FOAddressTableViewController alloc] init];
+    [navigationController setViewControllers:@[addresses]];
     
-    FOSettingsViewController *backVC = [[FOSettingsViewController alloc] init];
+//    FOSettingsViewController *backVC = [[FOSettingsViewController alloc] init];
 
 
     [self.window setRootViewController:navigationController];
@@ -49,11 +52,11 @@
                                                            [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
                                                            [UIFont fontWithName:@"Avenir" size:21.0], NSFontAttributeName, nil]];
     
-    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:navigationController backViewController:backVC];
-    self.viewController.delegate = self;
-    self.viewController.useParallaxMotionEffect = YES;
+//    self.viewController = [[JSSlidingViewController alloc] initWithFrontViewController:navigationController backViewController:backVC];
+//    self.viewController.delegate = self;
+//    self.viewController.useParallaxMotionEffect = YES;
     
-    [self.window setRootViewController:self.viewController];
+    [self.window setRootViewController:navigationController];
     
     [self.window makeKeyAndVisible];
     return YES;
