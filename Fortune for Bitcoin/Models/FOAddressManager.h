@@ -16,6 +16,7 @@
 
 - (void) addAddress:(FOAddress *)address;
 - (NSArray *) getAddresses;
+- (void)loadAddresses;
 
 + (id) sharedManager;
 
