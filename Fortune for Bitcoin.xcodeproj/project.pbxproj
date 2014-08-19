@@ -31,6 +31,9 @@
 		5A980FFB198565D100464869 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A980FE3198565D000464869 /* UIKit.framework */; };
 		5A981003198565D100464869 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A981001198565D100464869 /* InfoPlist.strings */; };
 		5A981005198565D100464869 /* Fortune_for_BitcoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A981004198565D100464869 /* Fortune_for_BitcoinTests.m */; };
+		5AC0396A199E5FDD00E75182 /* FOAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC03969199E5FDD00E75182 /* FOAddressTableViewController.m */; };
+		5AC0396E199E61E800E75182 /* FOAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0396D199E61E800E75182 /* FOAddress.m */; };
+		5AC03971199E620A00E75182 /* FOAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC03970199E620A00E75182 /* FOAddressManager.m */; };
 		6BBA166932B74EEE8DCD5B19 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8C1F6EBE344E32A6A8DE54 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,12 @@
 		5A981000198565D100464869 /* Fortune for BitcoinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fortune for BitcoinTests-Info.plist"; sourceTree = "<group>"; };
 		5A981002198565D100464869 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5A981004198565D100464869 /* Fortune_for_BitcoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fortune_for_BitcoinTests.m; sourceTree = "<group>"; };
+		5AC03968199E5FDD00E75182 /* FOAddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FOAddressTableViewController.h; path = Controllers/FOAddressTableViewController.h; sourceTree = "<group>"; };
+		5AC03969199E5FDD00E75182 /* FOAddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FOAddressTableViewController.m; path = Controllers/FOAddressTableViewController.m; sourceTree = "<group>"; };
+		5AC0396C199E61E800E75182 /* FOAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FOAddress.h; path = Models/FOAddress.h; sourceTree = "<group>"; };
+		5AC0396D199E61E800E75182 /* FOAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FOAddress.m; path = Models/FOAddress.m; sourceTree = "<group>"; };
+		5AC0396F199E620A00E75182 /* FOAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FOAddressManager.h; path = Models/FOAddressManager.h; sourceTree = "<group>"; };
+		5AC03970199E620A00E75182 /* FOAddressManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FOAddressManager.m; path = Models/FOAddressManager.m; sourceTree = "<group>"; };
 		8F8C1F6EBE344E32A6A8DE54 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2925A4D9774EE0A086BFAE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +136,8 @@
 				5A2D3CAB1994A2C800443966 /* FOSettingsViewController.xib */,
 				5A32517A1988BAA70025AC74 /* FOTransactionTableViewController.h */,
 				5A32517B1988BAA70025AC74 /* FOTransactionTableViewController.m */,
+				5AC03968199E5FDD00E75182 /* FOAddressTableViewController.h */,
+				5AC03969199E5FDD00E75182 /* FOAddressTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 		5A980FE5198565D000464869 /* Fortune for Bitcoin */ = {
 			isa = PBXGroup;
 			children = (
+				5AC0396B199E619F00E75182 /* Models */,
 				5A3EF9D119897701004F1A2A /* Additions */,
 				5A3EF9D819897B3F004F1A2A /* Views */,
 				5A3251791988BA770025AC74 /* Controllers */,
@@ -245,6 +257,17 @@
 				5A981001198565D100464869 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AC0396B199E619F00E75182 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0396C199E61E800E75182 /* FOAddress.h */,
+				5AC0396D199E61E800E75182 /* FOAddress.m */,
+				5AC0396F199E620A00E75182 /* FOAddressManager.h */,
+				5AC03970199E620A00E75182 /* FOAddressManager.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,13 +408,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2D3CA31994986300443966 /* JSSlidingViewController.m in Sources */,
+				5AC0396A199E5FDD00E75182 /* FOAddressTableViewController.m in Sources */,
 				5A3EF9D719897712004F1A2A /* UIColor+Additions.m in Sources */,
 				5A32517C1988BAA70025AC74 /* FOTransactionTableViewController.m in Sources */,
 				5A3EF9D619897712004F1A2A /* NSString+Additions.m in Sources */,
+				5AC0396E199E61E800E75182 /* FOAddress.m in Sources */,
 				5A2D3CAC1994A2C800443966 /* FOSettingsViewController.m in Sources */,
 				5A3EF9DC19897B78004F1A2A /* FOTransactionTableViewCell.m in Sources */,
 				5A980FEC198565D000464869 /* main.m in Sources */,
 				5A980FF0198565D100464869 /* FOAppDelegate.m in Sources */,
+				5AC03971199E620A00E75182 /* FOAddressManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
