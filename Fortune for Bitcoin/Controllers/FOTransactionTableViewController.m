@@ -335,6 +335,12 @@
             // Check Pasteboard content against a regular expression to see if it is a valid Bitcoin addres format. If it matches, load sendViewController and pass the string to it. If it does not match or clipboard is empty, show a UIAlertView notifying the user.
             if (([possibleAddress rangeOfString:@"^[13][a-km-zA-HJ-NP-Z0-9]{26,33}$" options:NSRegularExpressionSearch].location != NSNotFound) && possibleAddress.length !=0) {
                 self.address = possibleAddress;
+                FOAddress *newAddress = [[FOAddress alloc] init];
+                newAddress.address = possibleAddress;
+                newAddress.addressName = @"Laundry Account";
+                FOAddressManager *manager = [FOAddressManager sharedManager];
+                [manager addAddress:newAddress];
+                
                 [self updateBalanceAndTransactions];
                 
             }
@@ -384,13 +390,28 @@
             parsedAddress = [parsedAddress stringByReplacingOccurrencesOfString:@"bitcoin:" withString:@""];
             NSLog(@"parsed scan: %@", parsedAddress);
             
-            //Pass the parsed address to the view.
-            self.address = parsedAddress;
-            [self updateBalanceAndTransactions];
+            // Check Pasteboard content against a regular expression to see if it is a valid Bitcoin addres format. If it matches, load sendViewController and pass the string to it. If it does not match or clipboard is empty, show a UIAlertView notifying the user.
+            if (([parsedAddress rangeOfString:@"^[13][a-km-zA-HJ-NP-Z0-9]{26,33}$" options:NSRegularExpressionSearch].location != NSNotFound) && parsedAddress.length !=0) {
+                self.address = parsedAddress;
+                FOAddress *newAddress = [[FOAddress alloc] init];
+                newAddress.address = parsedAddress;
+                newAddress.addressName = @"Laundry Account";
+                FOAddressManager *manager = [FOAddressManager sharedManager];
+                [manager addAddress:newAddress];
+                [self updateBalanceAndTransactions];
+                
+            }
+            else {
+                NSLog(@"Not a valid Bitcoin address");
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                    message:@"The scanned QR code does not contain a valid bitcoin address"
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                
+                [alertView show];
+            }
             
-            NSLog(@"%@", self.address);
-            
-//            [self presentSendView];
         }];
     };
     scanningVC.cancelBlock = ^() {

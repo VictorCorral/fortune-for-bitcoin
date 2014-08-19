@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreBitcoin/CoreBitcoin+Categories.h>
 
+#import "FOAddressManager.h"
+#import "FOAddress.h"
+
 @interface FOTransactionTableViewController : UITableViewController
 
 
